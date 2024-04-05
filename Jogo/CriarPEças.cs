@@ -31,5 +31,14 @@ namespace Jogo
         {
             return peca;
         }
+        public int GetCor()
+        {
+            if((tipo & TipoPecas.Cor) == TipoPecas.Cor){
+                return 1;
+
+            }else{
+                return 0;
+            };
+        }
     }
 }
