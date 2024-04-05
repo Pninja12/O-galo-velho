@@ -6,6 +6,7 @@ namespace Jogo
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.UTF8;
              // Obtidos pela a ajuda do Copilot
             char openBox = '\u25A1'; // Open box
             char closedBox = '\u25AA'; // Closed box
@@ -15,6 +16,9 @@ namespace Jogo
             char closedCircle = '\u25CF'; // Closed circle
             char largerOpenCircle = '\u25EF'; // Larger open circle
             char largerClosedCircle = '\u2B24'; // Larger closed circle
+            
+            //Console.ForegroundColor = ConsoleColor.Black;
+            //Console.ForegroundColor = ConsoleColor.White;
 
         }
     }

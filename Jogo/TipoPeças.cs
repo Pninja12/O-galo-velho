@@ -6,7 +6,7 @@ namespace Jogo
     /// 
     /// </summary>
     [Flags]
-    enum TipoPeças
+    enum TipoPecas
     {
         Tamanho = 1 << 0, //Se 0 então pequeno, se 1 então grande
         Cor = 1 << 1, //Se 0 então branco, se 1 então preto

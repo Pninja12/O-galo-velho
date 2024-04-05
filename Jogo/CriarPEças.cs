@@ -2,8 +2,12 @@ using System;
 
 namespace Jogo
 {
-    public class CriarPeças
+    class CriarPecas
     {
         
+        public CriarPecas()
+        {
+
+        }
     }
 }
