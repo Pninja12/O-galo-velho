@@ -120,7 +120,15 @@ namespace Jogo
 
 
             //Jogo começa
-            Console.WriteLine("Tabuleiro atual:");
+
+            //Mostrar tabuleiro atual
+            string[,] jogo = new string[4,4];
+            for(int x=0;x<4;x++){  
+					for(int y=0;y<4;y++){  
+						Console.Write(jogo[x,y]+"-");
+					}  
+					Console.WriteLine(); 
+				} 
             Console.ReadLine();
             
 
