@@ -22,7 +22,6 @@ namespace Jogo
             
             //Console.ForegroundColor = ConsoleColor.Brown;
             //Console.ForegroundColor = ConsoleColor.White;
-
             CriarPecas[] pecas = new CriarPecas [16];
             pecas[0] = new CriarPecas(0,largerOpenBox,
             TipoPecas.Cor|TipoPecas.Tamanho|TipoPecas.Buraco|TipoPecas.Forma);
@@ -57,7 +56,7 @@ namespace Jogo
             pecas[15] = new CriarPecas(0,closedCircle,0);
 
             //tutorial
-            Tutorial.TutorialIniciar(pecas);
+            //Tutorial.TutorialIniciar(pecas);
             
             //Jogo começa
             jogo(pecas);
@@ -69,13 +68,15 @@ namespace Jogo
             int adversario = 1;
             int aserusada = 0;
             int[] pecasusadas = new int [16];
-
+            //fazer o tabuleiro aparecer com "-"
             for(int x=0;x<16;x++){  
                 tabuleiro[x] = "-";
                 pecasusadas[x] = -1;
             }    
             int ronda = 1;
             bool jg = true;
+
+            //loop do jogo
             while (jg == true)
             {
                 int m;
@@ -187,6 +188,8 @@ namespace Jogo
                     }
                     b+=1;
                 }
+                //fazer com que mude de ronda e identifcar qual peça foi usada 
+                //nesta ronda
                 pecasusadas[ronda] = aserusada;
                 ronda +=1;
 
