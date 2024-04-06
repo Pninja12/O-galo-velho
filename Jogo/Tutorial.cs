@@ -9,6 +9,7 @@ namespace Jogo
     {
         public static void TutorialIniciar(CriarPecas[] peca)
         {
+            //inicio
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Bem vindo ao jogo Galo da Velha");
             Console.WriteLine("");
@@ -19,84 +20,83 @@ namespace Jogo
             Console.Write("Este é um jogo para dois jogadores. ");
             Console.Write("O tabuleiro tem 16 espaços (4x4) e existem 16 ");
             Console.Write("peças diferentes que podem ser construídas ");
-            Console.WriteLine("combinando as quatro características seguintes:");
-            Console.ReadLine();
+            Console.Write("combinando as quatro características seguintes:\n");
+            Console.WriteLine("-Tamanho (grande/pequena)");
+            Console.WriteLine("-Cor (vermelho/azul)");
+            Console.WriteLine("-Forma (círculo/quadrado)");
+            Console.WriteLine("-Furo (com/sem)");
+            Console.WriteLine("");
             
-            
-            //as peças
-            Console.WriteLine("As peças cada um tem quatro caracteristicas:");
-            Console.WriteLine("Tamanho(grande/pequeno)");
-            Console.WriteLine("Cor(clara/escura)");
-            Console.WriteLine("Forma(circulo/quadrado)");
-            Console.WriteLine("Furo(com/sem)");
+            //mostra os símbolos no ecrã
             Console.WriteLine("E cada peça tem um simbolo representando:");
-            for(int i = 0; i<16 ;i++){
+            for(int i = 0; i<8 ;i++){
                 char simbolo = peca[i].GetPeca();
                 string icon = char.ToString(simbolo);
 
                 peca[i].GetCor();
-                Console.WriteLine(icon);
+                Console.Write(icon+ " ");
             }
-            Console.ReadLine();
-            Console.Clear();
-            //Objetivo
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("O objetivo de cada jogador é fazer uma linha");
-            Console.WriteLine(" pode ser vertical, horizontal ou diagonal,");
-            Console.Write("com quatro peças que sejam semelhantes em pelo");
-            Console.WriteLine(" menos umas das quatro"+
-            " caracteristicas referidas.");
-            Console.Write("O jogador vence apos colocar");
-            Console.Write(" a quarta peça da linha");
-            Console.Write(" e empata caso não tenha nenhuma linha feita");
-            Console.ReadLine();
-            Console.Clear();
-
-            //Regras
             Console.WriteLine("");
-            Console.WriteLine("Regras:");
+            for(int i = 8; i<16 ;i++){
+                char simbolo = peca[i].GetPeca();
+                string icon = char.ToString(simbolo);
 
-            Console.Write("Os jogadores jogam alternadamente");
-            Console.Write(" e cada um coloca uma peça, uma vez colocadas");
-            Console.WriteLine(" nao podem ser mexidas");
-
-            Console.Write("A escolha da peça a colocar no tabuleiro");
-            Console.Write(" não é feita pelo mesmo jogador que a coloca");
-            Console.WriteLine(", é o adversario que escolhe a"+ 
-            " peça a ser colocada");
-
-            Console.Write("Essencialmente cada turno consiste em");
-            Console.WriteLine(" duas ações:");
-
-            Console.Write("1- Adversario escolhe a peça a ser");
-            Console.WriteLine(" colocada pelo jogador atual");
-
-            Console.Write("2- Jogador atual coloca a peça dada ");
-            Console.WriteLine(" pelo adversario onde desejar");
-            Console.Write("Se a peça colocada pelo jogador atual");
-            Console.Write(" completar uma linha de");
-            Console.Write(" quatro peças como pelo menos");
-            Console.WriteLine(" uma caracteristica semelhante ele vence");
+                peca[i].GetCor();
+                Console.Write(icon+ " ");
+            }
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("");
+            Console.WriteLine("Clique Enter para continuar...");
             Console.ReadLine();
-            Console.Clear();
+
+            //objetivo
+            Console.WriteLine("Objetivo:");
+            Console.WriteLine("");
+            Console.Write("O objetivo do jogo é completar uma linha com ");
+            Console.Write("quatro peças que sejam semelhantes em pelo menos");
+            Console.Write(" uma das suas quatro características (tamanho,cor,");
+            Console.WriteLine(" forma ou furo);");
+            Console.Write("A linha pode ser vertical, horizontal ou diagonal;");
+            Console.Write("\nO vencedor é o jogador que colocar a quarta ");
+            Console.WriteLine("peça da linha;");
+            Console.Write("O jogo termina em empate quando ninguém ");
+            Console.Write("atinge o objetivo após colocação das 16 peças.");
+            Console.WriteLine("");
+            Console.WriteLine("Clique Enter para continuar...");
+            Console.ReadLine();
+
+            //regras
+            Console.WriteLine("Regras do Jogo:");
+            Console.WriteLine("");
+            Console.Write("Os jogadores jogam alternadamente, ");
+            Console.Write("colocando uma peça no tabuleiro.");
+            Console.Write(" Uma vez colocadas, as peças não podem voltar");
+            Console.WriteLine(" a ser movidas.");
+            Console.Write("A escolha da peça a colocar no tabuleiro  não é ");
+            Console.Write("feita pelo mesmo jogador que a coloca, ");
+            Console.Write("é o adversário que decide qual será");
+            Console.WriteLine(" a peça seguinte a colocar.");
+            Console.WriteLine("Assim, cada jogada consiste em duas ações:");
+            Console.Write("1. Adversário escolhe peça a ser colocada");
+            Console.WriteLine(" pelo jogador atual;");
+            Console.Write("2. Jogador atual coloca no tabuleiro");
+            Console.WriteLine(" a peça dada pelo adversário.");
+            Console.WriteLine("");
+            Console.WriteLine("Clique Enter para continuar...");
+            Console.ReadLine();
+
             //como jogar
-            Console.Write("Quando o jogo iniciar ira aparece um texto");
-            Console.Write(" a dizer para o adversario do jogador atual");
-            Console.Write(" indicar a peça que vai ser utilizada");
-            Console.Write(" e ele tera que indicar um numero de 1 a 16");
-            Console.WriteLine(" para indicar a peça");
-            Console.Write("Em Seguida o jogador atual diz onde deseja colocar");
-            Console.Write(" a peça, para indicar onde colocar a peça é so");
-            Console.Write(" indicar a posiçaõ");
-            Console.WriteLine("(numero de 1 a 16 a contar a partir" + 
-            " do canto superior esquerdo para a direita)");
-            Console.ReadLine();
-            Console.Clear();
-
-            //perguntar se acabou de ler tudo
-            
-            Console.Write("Quando tiver lido tudo e achar que esta pronto ");
-            Console.Write(" para continuar clique enter");
+            Console.WriteLine("Como Jogar:");
+            Console.WriteLine("");
+            Console.Write("Quando o jogo iniciar, irá aparecer um texto");
+            Console.Write(" a dizer para o adversário");
+            Console.Write(" indicar a peça que vai ser utilizada, inserindo");
+            Console.WriteLine("um número de 1 a 16 correspondente à peça.");
+            Console.Write("Em Seguida o jogador atual deve inserir o número ");
+            Console.Write("(de 1 a 16) correspondente à posição ");
+            Console.Write("onde deseja colocar a peça.");
+            Console.WriteLine("");
+            Console.WriteLine("Clique Enter para começar o jogo...");
             Console.ReadLine();
             Console.Clear();
         }
