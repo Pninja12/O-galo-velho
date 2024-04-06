@@ -22,135 +22,44 @@ namespace Jogo
             
             //Console.ForegroundColor = ConsoleColor.Brown;
             //Console.ForegroundColor = ConsoleColor.White;
-
             CriarPecas[] pecas = new CriarPecas [16];
-            pecas[0] = new CriarPecas(-1,largerOpenBox,
+            pecas[0] = new CriarPecas(0,largerOpenBox,
             TipoPecas.Cor|TipoPecas.Tamanho|TipoPecas.Buraco|TipoPecas.Forma);
-            pecas[1] = new CriarPecas(-1,openBox,
+            pecas[1] = new CriarPecas(0,openBox,
             TipoPecas.Cor|TipoPecas.Buraco|TipoPecas.Forma);
-            pecas[2] = new CriarPecas(-1,largerOpenCircle,
+            pecas[2] = new CriarPecas(0,largerOpenCircle,
             TipoPecas.Cor|TipoPecas.Tamanho|TipoPecas.Buraco);
-            pecas[3] = new CriarPecas(-1,openCircle,
+            pecas[3] = new CriarPecas(0,openCircle,
             TipoPecas.Cor|TipoPecas.Buraco);
-            pecas[4] = new CriarPecas(-1,largerClosedBox,
+            pecas[4] = new CriarPecas(0,largerClosedBox,
             TipoPecas.Cor|TipoPecas.Tamanho|TipoPecas.Forma);
-            pecas[5] = new CriarPecas(-1,closedBox,
+            pecas[5] = new CriarPecas(0,closedBox,
             TipoPecas.Cor|TipoPecas.Forma);
-            pecas[6] = new CriarPecas(-1,largerClosedCircle,
+            pecas[6] = new CriarPecas(0,largerClosedCircle,
             TipoPecas.Cor|TipoPecas.Tamanho);
-            pecas[7] = new CriarPecas(-1,closedCircle,
+            pecas[7] = new CriarPecas(0,closedCircle,
             TipoPecas.Cor);
-            pecas[8] = new CriarPecas(-1,largerOpenBox,
+            pecas[8] = new CriarPecas(0,largerOpenBox,
             TipoPecas.Tamanho|TipoPecas.Buraco|TipoPecas.Forma);
-            pecas[9] = new CriarPecas(-1,openBox,
+            pecas[9] = new CriarPecas(0,openBox,
             TipoPecas.Buraco|TipoPecas.Forma);
-            pecas[10] = new CriarPecas(-1,largerOpenCircle,
+            pecas[10] = new CriarPecas(0,largerOpenCircle,
             TipoPecas.Tamanho|TipoPecas.Buraco);
-            pecas[11] = new CriarPecas(-1,openCircle,
+            pecas[11] = new CriarPecas(0,openCircle,
             TipoPecas.Buraco);
-            pecas[12] = new CriarPecas(-1,largerClosedBox,
+            pecas[12] = new CriarPecas(0,largerClosedBox,
             TipoPecas.Tamanho|TipoPecas.Forma);
-            pecas[13] = new CriarPecas(-1,closedBox,
+            pecas[13] = new CriarPecas(0,closedBox,
             TipoPecas.Forma);
-            pecas[14] = new CriarPecas(-1,largerClosedCircle,
+            pecas[14] = new CriarPecas(0,largerClosedCircle,
             TipoPecas.Tamanho);
-            pecas[15] = new CriarPecas(-1,closedCircle,0);
+            pecas[15] = new CriarPecas(0,closedCircle,0);
 
-
-
-            Console.ForegroundColor = ConsoleColor.White;
             //tutorial
-            //como funciona
-            Console.WriteLine("Este jogo funciona da seguinte forma:");
-            Console.WriteLine("");
-            Console.WriteLine("Isto é um jogo de 2 jogadores um contra um.");
-            Console.WriteLine("Existem 16 peças diferentes e um tabuleiro 4x4");
-            Console.ReadLine();
+            //Tutorial.TutorialIniciar(pecas);
             
-            
-            //as peças
-            Console.WriteLine("As peças cada um tem quatro caracteristicas:");
-            Console.WriteLine("Tamanho(grande/pequeno)");
-            Console.WriteLine("Cor(clara/escura)");
-            Console.WriteLine("Forma(circulo/quadrado)");
-            Console.WriteLine("Furo(com/sem)");
-            Console.WriteLine("E cada peça tem um simbolo representando:");
-            for(int i = 0; i<16 ;i++){
-                char simbolo = pecas[i].GetPeca();
-                string icon = char.ToString(simbolo);
-
-                Console.ForegroundColor = ConsoleColor.Black;
-                Console.WriteLine(icon, Console.ForegroundColor);
-            }
-            Console.ReadLine();
-            Console.Clear();
-            //Objetivo
-            Console.Write("O objetivo de cada jogador é fazer uma linha");
-            Console.WriteLine(" pode ser vertical, horizontal ou diagonal,");
-            Console.Write("com quatro peças que sejam semelhantes em pelo");
-            Console.WriteLine(" menos umas das quatro"+
-            " caracteristicas referidas.");
-            Console.Write("O jogador vence apos colocar");
-            Console.Write(" a quarta peça da linha");
-            Console.Write(" e empata caso não tenha nenhuma linha feita");
-            Console.ReadLine();
-            Console.Clear();
-
-            //Regras
-            Console.WriteLine("");
-            Console.WriteLine("Regras:");
-
-            Console.Write("Os jogadores jogam alternadamente");
-            Console.Write(" e cada um coloca uma peça, uma vez colocadas");
-            Console.WriteLine(" nao podem ser mexidas");
-
-            Console.Write("A escolha da peça a colocar no tabuleiro");
-            Console.Write(" não é feita pelo mesmo jogador que a coloca");
-            Console.WriteLine(", é o adversario que escolhe a"+ 
-            " peça a ser colocada");
-
-            Console.Write("Essencialmente cada turno consiste em");
-            Console.WriteLine(" duas ações:");
-
-            Console.Write("1- Adversario escolhe a peça a ser");
-            Console.WriteLine(" colocada pelo jogador atual");
-
-            Console.Write("2- Jogador atual coloca a peça dada ");
-            Console.WriteLine(" pelo adversario onde desejar");
-            Console.Write("Se a peça colocada pelo jogador atual");
-            Console.Write(" completar uma linha de");
-            Console.Write(" quatro peças como pelo menos");
-            Console.WriteLine(" uma caracteristica semelhante ele vence");
-            Console.ReadLine();
-            Console.Clear();
-            //como jogar
-            Console.Write("Quando o jogo iniciar ira aparece um texto");
-            Console.Write(" a dizer para o adversario do jogador atual");
-            Console.Write(" indicar a peça que vai ser utilizada");
-            Console.Write(" e ele tera que indicar um numero de 1 a 16");
-            Console.WriteLine(" para indicar a peça");
-            Console.Write("Em Seguida o jogador atual diz onde deseja colocar");
-            Console.Write(" a peça, para indicar onde colocar a peça é so");
-            Console.Write(" indicar a posiçaõ");
-            Console.WriteLine("(numero de 1 a 16 a contar a partir" + 
-            " do canto superior esquerdo para a direita)");
-            Console.ReadLine();
-            Console.Clear();
-
-            //perguntar se acabou de ler tudo
-            
-            Console.Write("Quando tiver lido tudo e achar que esta pronto ");
-            Console.Write(" para continuar clique enter");
-            Console.ReadLine();
-            Console.Clear();
-            
-
-
             //Jogo começa
             jogo(pecas);
-
-            
-
         }
 
         static void jogo(CriarPecas[] todasPecas){
@@ -159,13 +68,15 @@ namespace Jogo
             int adversario = 1;
             int aserusada = 0;
             int[] pecasusadas = new int [16];
-
+            //fazer o tabuleiro aparecer com "-"
             for(int x=0;x<16;x++){  
                 tabuleiro[x] = "-";
                 pecasusadas[x] = -1;
             }    
             int ronda = 1;
             bool jg = true;
+
+            //loop do jogo
             while (jg == true)
             {
                 int m;
@@ -184,11 +95,38 @@ namespace Jogo
                                     Console.Write(tabuleiro[m]);
                                 }
                             } 
-                        }                
+                        }
+                        Console.Write(" ");
                         m += 1;
                     }  
                     Console.WriteLine(); 
-                }       
+                }     
+                //mostrar peças restantes 
+                Console.WriteLine("Peças restantes");
+                for(int i = 0; i<8 ;i++){         
+                char simbolo = todasPecas[i].GetPeca();
+                string icon = char.ToString(simbolo);
+                todasPecas[i].GetCor();
+                    if(todasPecas[i].GetPosicao()==0){
+                        Console.Write((i+1) + "-" + icon+ " ");
+                    }   
+                }
+                Console.WriteLine();
+                for(int i = 8; i<16 ;i++){
+                char simbolo = todasPecas[i].GetPeca();
+                string icon = char.ToString(simbolo);
+                todasPecas[i].GetCor();
+                    if(todasPecas[i].GetPosicao()==0){
+                        Console.Write((i+1) + "-" + icon+ " ");
+                    }   
+                }
+                Console.WriteLine();
+                //verificar quem ganha
+                Console.ForegroundColor = ConsoleColor.White;
+                if (Fim.VerificarFim(todasPecas)){
+                    jg = false;
+                   Console.WriteLine($"player {playeratual} ganhou!!");
+                };  
                 //Pedir a peça a ser utilizada 
                 if (playeratual == 1) {
                     playeratual = 2;
@@ -271,10 +209,8 @@ namespace Jogo
                     }
                     b+=1;
                 }
-                //if (Fim.VerificarFim(todasPecas)){
-                //    jg = false;
-                //   Console.WriteLine($"player {playeratual} ganhou!!");
-                //};
+                //fazer com que mude de ronda e identifcar qual peça foi usada 
+                //nesta ronda
                 pecasusadas[ronda] = aserusada;
                 ronda +=1;
 
