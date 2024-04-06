@@ -101,7 +101,28 @@ namespace Jogo
                     }  
                     Console.WriteLine(); 
                 }     
+                //mostrar peças restantes 
+                Console.WriteLine("Peças restantes");
+                for(int i = 0; i<8 ;i++){         
+                char simbolo = todasPecas[i].GetPeca();
+                string icon = char.ToString(simbolo);
+                todasPecas[i].GetCor();
+                    if(todasPecas[i].GetPosicao()==0){
+                        Console.Write((i+1) + "-" + icon+ " ");
+                    }   
+                }
+                Console.WriteLine();
+                for(int i = 8; i<16 ;i++){
+                char simbolo = todasPecas[i].GetPeca();
+                string icon = char.ToString(simbolo);
+                todasPecas[i].GetCor();
+                    if(todasPecas[i].GetPosicao()==0){
+                        Console.Write((i+1) + "-" + icon+ " ");
+                    }   
+                }
+                Console.WriteLine();
                 //verificar quem ganha
+                Console.ForegroundColor = ConsoleColor.White;
                 if (Fim.VerificarFim(todasPecas)){
                     jg = false;
                    Console.WriteLine($"player {playeratual} ganhou!!");
