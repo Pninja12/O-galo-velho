@@ -22,7 +22,7 @@ namespace Jogo
         {
             return posicao;
         }
-        
+
         public void SetPosicao(int poss)
         {
             posicao = poss;
@@ -40,7 +40,7 @@ namespace Jogo
         public void GetCor()
         {
             if((tipo & TipoPecas.Cor) == TipoPecas.Cor){
-                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.ForegroundColor = ConsoleColor.Red;
 
             }else{
                 Console.ForegroundColor = ConsoleColor.Blue;
