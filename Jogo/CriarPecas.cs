@@ -22,6 +22,11 @@ namespace Jogo
         {
             return posicao;
         }
+        
+        public void SetPosicao(int poss)
+        {
+            posicao = poss;
+        }
 
         public TipoPecas GetTipo()
         {
