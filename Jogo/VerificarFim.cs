@@ -40,11 +40,20 @@ namespace Jogo
 
                 if (p1 <= 4 && p2 <= 4 && p3 <= 4 && p4 <= 4)
                     return true;
+                if ((p1>4&&p1<9)&&(p2>4&&p2<9)&&(p3>4&&p3<9)&&(p4>4&&p4<9))
+                    return true;
+                if ((p1>8&&p1<13)&&(p2>8&&p2<13)&&(p3>8&&p3<13)&&(p4>8&&p4<13))
+                    return true;
+                if ((p1>8&&p1<13)&&(p2>8&&p2<13)&&(p3>8&&p3<13)&&(p4>8&&p4<13))
+                    return true;
+                if (p1>12&&p2>12&&p3>12&&p4>12)
+                    return true;
+                
             }
             }
             }
             }
-            return true;
+            return false;
         }
 
     }
