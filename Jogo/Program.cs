@@ -130,8 +130,6 @@ namespace Jogo
 					Console.WriteLine(); 
 				} 
             Console.ReadLine();
-            
-
         }
     }
 }

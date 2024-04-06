@@ -10,6 +10,7 @@ namespace Jogo
         int posicao;
         char peca;
         TipoPecas tipo;
+        
         public CriarPecas(int pos, char pe, TipoPecas ti)
         {
             posicao = pos;
