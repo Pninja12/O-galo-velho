@@ -100,14 +100,21 @@ namespace Jogo
                         m += 1;
                     }  
                     Console.WriteLine(); 
-                }     
+                } 
+                //verificar quem ganha
+                Console.ForegroundColor = ConsoleColor.White;
+                if (Fim.VerificarFim(todasPecas)){
+                    jg = false;
+                   Console.WriteLine($"player {playeratual} ganhou!!");
+                   break;
+                };      
                 //mostrar peças restantes 
                 Console.WriteLine("Peças restantes");
                 for(int i = 0; i<8 ;i++){         
                 char simbolo = todasPecas[i].GetPeca();
                 string icon = char.ToString(simbolo);
                 todasPecas[i].GetCor();
-                    if(todasPecas[i].GetPosicao()==0){
+                if(todasPecas[i].GetPosicao()==0){
                         Console.Write((i+1) + "-" + icon+ " ");
                     }   
                 }
@@ -121,12 +128,7 @@ namespace Jogo
                     }   
                 }
                 Console.WriteLine();
-                //verificar quem ganha
-                Console.ForegroundColor = ConsoleColor.White;
-                if (Fim.VerificarFim(todasPecas)){
-                    jg = false;
-                   Console.WriteLine($"player {playeratual} ganhou!!");
-                };  
+
                 //Pedir a peça a ser utilizada 
                 if (playeratual == 1) {
                     playeratual = 2;
