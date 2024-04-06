@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.IO;
 
 namespace Jogo
@@ -8,7 +9,7 @@ namespace Jogo
         
         static void Main(string[] args)
         {
-                        //Console.OutputEncoding = Encoding.UTF8;
+            Console.OutputEncoding = Encoding.UTF8;
             // Obtidos pela a ajuda do Copilot
             char openBox = '\u25A1'; // Open box
             char closedBox = '\u25AA'; // Closed box
@@ -55,6 +56,8 @@ namespace Jogo
             TipoPecas.Tamanho);
             pecas[15] = new CriarPecas(0,closedCircle,0);
 
+
+            Fim.VerificarFim(pecas);
             ConsoleColor[] colors = (ConsoleColor[]) ConsoleColor.GetValues
             (typeof(ConsoleColor));
             //tutorial
@@ -258,9 +261,6 @@ namespace Jogo
                 pecasusadas[ronda] = aserusada;
                 ronda +=1;
 
-                
-
-                
 
                 
 

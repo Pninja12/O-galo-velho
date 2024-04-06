@@ -32,13 +32,13 @@ namespace Jogo
         {
             return peca;
         }
-        public int GetCor()
+        public void GetCor()
         {
             if((tipo & TipoPecas.Cor) == TipoPecas.Cor){
-                return 1;
+                Console.ForegroundColor = ConsoleColor.Blue;
 
             }else{
-                return 0;
+                Console.ForegroundColor = ConsoleColor.Blue;
             };
         }
     }
