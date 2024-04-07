@@ -44,3 +44,29 @@ linhas e colunas, simplesmente fizemos uma lista de 1 a 16 em que de 4 em 4 "-",
 passa para a linha de baixo para fazer o efeito de um tabuleiro 4x4.
 
 ### Fluxograma
+
+```mermaid
+flowchart TD
+    Comeco([Começo]) --> 
+    Criar[Criação das 16 peças] -->
+    Tutorial[Chamar a classe Tutorial]
+    TutorialInit([Tutorial])
+    Pecas/Tabuleiro[Descrição das peças e do tabuleiro]
+    Regras[Explicação das regras, do objetivo e de como chegar lá]
+    Tutorial --> TutorialInit -->
+    Pecas/Tabuleiro --> Regras --> Tutorial
+    Jogo[Inicialização da classe Jogo]
+    JogoInit([Jogo])
+    Amostra[Mostrar o tabuleiro e as peças nele colocadas]
+    Ganhou{Verifica se alguém ganhou}
+    Vitória([O PlayerX ganhou])
+    Ganhou -->|Sim| Vitória
+    Ganhou -->|Não| PedirPeça
+    PedirPeça[Pede a peça ao outro jogador]
+    ColocarPeça[Pergunta onde o jogador quer colocar a peça]
+    Troca[Troca os jogadores]
+    Tutorial-->Jogo-->JogoInit
+    JogoInit-->Amostra-->Ganhou
+    PedirPeça-->ColocarPeça-->Troca
+    Troca-->Amostra
+    ```
