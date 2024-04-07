@@ -54,7 +54,7 @@ flowchart TD
     Pecas/Tabuleiro[Descrição das peças e do tabuleiro]
     Regras[Explicação das regras, do objetivo e de como chegar lá]
     Tutorial --> TutorialInit -->
-    Pecas/Tabuleiro --> Regras --> Tutorial
+    Pecas/Tabuleiro --> Regras --> Jogo
     Jogo[Inicialização da classe Jogo]
     JogoInit([Jogo])
     Amostra[Mostrar o tabuleiro e as peças nele colocadas]
@@ -65,7 +65,7 @@ flowchart TD
     PedirPeça[Pede a peça ao outro jogador]
     ColocarPeça[Pergunta onde o jogador quer colocar a peça]
     Troca[Troca os jogadores]
-    Tutorial-->Jogo-->JogoInit
+    Jogo-->JogoInit
     JogoInit-->Amostra-->Ganhou
     PedirPeça-->ColocarPeça-->Troca
     Troca-->Amostra
