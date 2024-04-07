@@ -69,4 +69,3 @@ flowchart TD
     JogoInit-->Amostra-->Ganhou
     PedirPeça-->ColocarPeça-->Troca
     Troca-->Amostra
-    ```
