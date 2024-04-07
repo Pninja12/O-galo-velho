@@ -2,6 +2,9 @@ using System;
 
 namespace Jogo
 {
+    /// <summary>
+    /// Enumerador para identificar cada peça (tipo da peça)
+    /// </summary>
     [Flags]
     enum TipoPecas
     {

@@ -5,6 +5,14 @@ namespace Jogo
 {
     class Fim
     {
+        /// <summary>
+        /// Recebe a lista de peças e atribui a 4 variaveis cada peça para
+        /// verificar se existe algum conjunto de peças que dá vitória a um
+        /// dos jogadores
+        /// </summary>
+        /// <param name="pecas">A lista de peças</param>
+        /// <returns>retorna true se houver um vencedor e false se não acontecer
+        /// nada</returns>
         public static bool VerificarFim(CriarPecas[] pecas)
         {
             int p1 = 0;
