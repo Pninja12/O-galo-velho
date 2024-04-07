@@ -10,11 +10,29 @@ João Rodrigues, a22302667.
 
 ## Lista de Tarefas
 
-| Nome          | Tarefas                                     |
-| --------------|---------------------------------------------|
-| Paulo Silva   | TipoPecas.cs, CriarPecas.cs, VerificarFim.cs|
-| Lee Dias      | Program.cs                                  |
-| João Rodrigues| Tutorial.cs, README.md                      |
+| Data | Nome | Tarefa |
+|------|------|--------|
+|27/3|Paulo Silva|Cria Enum com cada tipo de peça|
+|28/3|Paulo Silva|Adiciona símbolos unicode para cada peça|
+|5/4|Paulo Silva|Update do constructor da criação das peças|
+|5/4|Lee Dias|Adiciona o tabuleiro|
+|6/4|Lee Dias|Faz o loop de jogo|
+|6/4|Paulo Silva|Faz alterações na verificação do fim|
+|6/4|João Rodrigues|Corrige bugs no Program.cs e adiciona cores|
+|6/4|Paulo Silva|Finaliza o sistema de verificação do fim|
+|6/4|João Rodrigues|Atualiza o Program.cs e faz o Tutorial.cs|
+|6/4|Lee Dias|Adiciona a verificação do fim ao Program.cs|
+|6/4|Lee Dias|Adiciona comentários ao Program.cs|
+|6/4|Lee Dias|Mostra as peças restantes durante o jogo|
+|6/4|Paulo Silva|Corrige o VerificarFim.cs|
+|6/4|João Rodrigues|Finaliza o tutorial e adiciona ao Program.cs|
+|7/4|Paulo Silva|Adiciona documentação XML|
+|7/4|João Rodrigues|Faz o README|
+|7/4|João Rodrigues|Corrige erros e melhora a interface|
+|7/4|Lee Dias|Adiciona o método de empate|
+|7/4|Paulo Silva|Adiciona o fluxograma ao README|
+|7/4|João Rodrigues|Finaliza o README.md|
+
 
 ## [>Repositório Git<](https://github.com/Pninja12/O-galo-velho)
 
