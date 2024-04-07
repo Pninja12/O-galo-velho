@@ -72,6 +72,7 @@ namespace Jogo
             int adversario = 1;
             int aserusada = 0;
             int[] pecasusadas = new int [16];
+            int empate = 0;
             //fazer o tabuleiro aparecer com "-"
             for(int x=0;x<16;x++){  
                 tabuleiro[x] = "-";
@@ -107,12 +108,14 @@ namespace Jogo
                     Console.WriteLine(); 
                 }     
                 //mostrar peças restantes 
+                empate = 0;
                 Console.WriteLine("Peças restantes:");
                 for(int i = 0; i<8 ;i++){         
                 char simbolo = todasPecas[i].GetPeca();
                 string icon = char.ToString(simbolo);
                 todasPecas[i].GetCor();
                     if(todasPecas[i].GetPosicao()==0){
+                        empate +=1;
                         Console.Write((i+1) + "-" + icon+ " ");
                     }   
                 }
@@ -122,10 +125,17 @@ namespace Jogo
                 string icon = char.ToString(simbolo);
                 todasPecas[i].GetCor();
                     if(todasPecas[i].GetPosicao()==0){
+                        empate +=1;
                         Console.Write((i+1) + "-" + icon+ " ");
                     }   
                 }
                 Console.WriteLine();
+                //verificar empate 
+                if(VerificarEmpate(empate)){
+                    jg = false;
+                   Console.Write($"Não existem peças restantes o jogo Empatou");
+                   break;
+                }
                 //verificar quem ganha
                 Console.ForegroundColor = ConsoleColor.White;
                 if (Fim.VerificarFim(todasPecas)){
@@ -220,6 +230,14 @@ namespace Jogo
                 //nesta ronda
                 pecasusadas[ronda] = aserusada;
                 ronda +=1;
+            }
+            
+        }
+        static bool VerificarEmpate(int emp){
+            if(emp == 0){
+                return true;
+            }else{
+                return false;
             }
             
         }
