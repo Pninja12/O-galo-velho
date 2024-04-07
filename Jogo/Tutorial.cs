@@ -11,12 +11,10 @@ namespace Jogo
         {
             //inicio
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("Bem vindo ao jogo Galo da Velha!");
-            Console.WriteLine("");
+            Console.WriteLine("Bem vindo ao jogo Galo da Velha!\n");
 
             //descrição
-            Console.WriteLine("Descrição:");
-            Console.WriteLine("");
+            Console.WriteLine("Descrição:\n");
             Console.Write("Este é um jogo para dois jogadores. ");
             Console.Write("O tabuleiro tem 16 espaços (4x4) e existem 16 ");
             Console.Write("peças diferentes que podem ser construídas ");
@@ -24,9 +22,8 @@ namespace Jogo
             Console.WriteLine("-Tamanho (grande/pequena);");
             Console.WriteLine("-Cor (vermelho/azul);");
             Console.WriteLine("-Forma (círculo/quadrado);");
-            Console.WriteLine("-Furo (com/sem).");
-            Console.WriteLine("");
-            
+            Console.WriteLine("-Furo (com/sem).\n");
+
             //mostra os símbolos no ecrã
             Console.WriteLine("Cada peça é representada por um símbolo:");
             for(int i = 0; i<8 ;i++){
